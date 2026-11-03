@@ -195,3 +195,50 @@ test("scroll reveals reverse above their trigger and replay on the next descent"
     await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
   }
 });
+
+test("mobile collages scale with the viewport and keep clear space after text", async ({
+  page,
+}) => {
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  const heights: number[] = [];
+  for (const width of [360, 390, 540, 700]) {
+    await page.setViewportSize({ width, height: 850 });
+    await page.goto("/");
+    await page.evaluate(() => document.fonts.ready);
+    const metrics = await page
+      .locator(".identity-spread")
+      .evaluateAll((sections) =>
+        sections.map((section) => {
+          const copy = section
+            .querySelector(".identity-copy")!
+            .getBoundingClientRect();
+          const art = section
+            .querySelector(".identity-collage")!
+            .getBoundingClientRect();
+          const link = section
+            .querySelector(".spread-link")!
+            .getBoundingClientRect();
+          return {
+            ratio: art.height / art.width,
+            textGap: art.top - copy.bottom,
+            linkGap: link.top - art.bottom,
+            height: art.height,
+          };
+        }),
+      );
+    for (const metric of metrics) {
+      expect(metric.ratio).toBeGreaterThan(0.8);
+      expect(metric.ratio).toBeLessThan(1.15);
+      expect(metric.textGap).toBeGreaterThanOrEqual(24);
+      expect(metric.textGap).toBeLessThanOrEqual(64);
+      expect(metric.linkGap).toBeGreaterThanOrEqual(12);
+    }
+    heights.push(metrics[0].height);
+    expect(
+      await page.evaluate(
+        () => document.documentElement.scrollWidth <= innerWidth,
+      ),
+    ).toBe(true);
+  }
+  expect(heights[3] - heights[0]).toBeGreaterThan(200);
+});
