@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local tooling and browser artifacts
+/.tools/
+/test-results/
+/playwright-report/
+/reference/qa/
+/reference/

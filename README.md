@@ -1,34 +1,55 @@
-# Dariel Failanga � Portfolio v2
+﻿# Dariel Failanga — Portfolio v2
 
-Local portfolio project for Dariel Failanga, a graphic designer specializing in marketing designs, brand identity, and layouts.
+A local Next.js portfolio for brand designer and visual artist Dariel Failanga, closely following the art direction studied in [the reference strategy](docs/reference-study-and-strategy.md).
 
-## Stack
-
-- Next.js App Router, React, TypeScript
-- GSAP and @gsap/react for animation (use client components and useGSAP for cleanup)
-- Plain CSS; ESLint
-- Three.js deferred until a specific 3D interaction needs it
-
-## Development
+## Run
 
 ```sh
 npm install
 npm run dev
 ```
 
-Open http://localhost:3000. Run `npm run build` to verify production compilation, `npm run lint` for lint checks, and `npm start` to serve a production build.
+Open http://localhost:3000. For a production preview, run `npm run build`, then `npm start`.
 
-## Design reference
+## Included
 
-Primary reference: https://www.behance.net/gallery/244154207/Portfolio-2026
+- Reference-led charcoal/cream grids, floating artwork, outlined portrait, paper labels, and overlapping project spreads.
+- Little Heirloom, Pawerhouse, and Yo-Gu Star identity stories; marketing, print/publication, merchandise, and video chapters.
+- All 109 images in a category/subcategory archive with keyboard-accessible image viewer; all 10 videos with native playback controls.
+- GSAP entrances and floating artwork, continuous category strips, motion pause control, and system reduced-motion support.
+- Exact approved biography and dfailanga.dfx@gmail.com contact link.
+- Locally hosted Manrope and Instrument Serif fonts; licenses included in public/fonts.
 
-The visual implementation should closely follow this reference. It could not be inspected during setup because Behance returned HTTP 403. The current page is only a setup placeholder, not the final portfolio design. Review the reference before making visual decisions, and use Dariel's own artwork and copy.
+## Checks
 
-## Starting points
+```sh
+npm test
+npm run lint
+npm run build
+npx playwright install chromium
+npm run test:e2e
+```
 
-- `src/app/page.tsx`: homepage
-- `src/app/layout.tsx`: page metadata and root layout
-- `src/app/globals.css`: global styles
-- `public/`: portfolio images and other static assets
+Browser tests use the local server on port 3000 or launch it if absent. Tests cover catalog coverage, category filters, image-viewer navigation/dismissal/focus, four viewport widths, reduced motion, pause persistence, and browser metadata for every video.
 
-For animations, respect prefers-reduced-motion and keep content readable without animation. Project is local only; no hosting has been configured.
+## Artwork
+
+Originals remain untouched in `public/works/`. `public/personal/profile.png` supplies the portrait. Display images and video posters are generated into `public/optimized/works/`, with metadata in `src/data/assets.json`.
+
+To regenerate after adding artwork:
+
+```sh
+python -m pip install Pillow
+python -m pip install --target .tools imageio-ffmpeg
+npm run assets:prepare
+```
+
+The image preparation script allows the known 233-megapixel print original, resizes images to at most 1600 pixels per side, and also creates 640-pixel thumbnails. It requires enough local memory to decode that print original. Generated assets are included, so Python is unnecessary for normal development or production.
+
+`src/data/portfolio.ts` defines curated projects. `src/components/portfolio.tsx` assembles the spreads, `gallery.tsx` owns filtering/viewing, and `portfolio-motion.tsx` scopes animation and cleanup. Global layout styling is in `src/app/globals.css`.
+
+The `reference/` directory is study/QA material and is not served by the application. This project is local only; no hosting or external services are configured.
+
+## Known limits
+
+The supplied portrait is 577 × 433 pixels. Desktop cutout quality is limited by that resolution. The reference's exact typefaces and original layered source files were unavailable; the implementation matches its layout language using Dariel's artwork and locally licensed fonts. Existing MP4s are streamed on demand without transcoding; the largest is about 78.5 MB. npm reports moderate development-tool advisories; the setup production dependency audit was clear.
