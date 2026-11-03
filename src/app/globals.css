@@ -1,0 +1,6 @@
+:root { color-scheme: light; background: #f6f3ed; color: #25251f; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Georgia, serif; }
+main { max-width: 960px; margin: auto; padding: 18vh 24px; }
+h1 { font-size: clamp(3rem, 9vw, 7rem); line-height: 1; letter-spacing: -0.05em; margin: 24px 0; }
+p { max-width: 560px; font-size: 1.125rem; line-height: 1.6; }
