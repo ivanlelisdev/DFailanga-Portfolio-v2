@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --ink: #181918;
   --paper: #e6e1d5;
   --red: #dc351b;
@@ -103,14 +103,14 @@ em {
 .wordmark span {
   display: block;
   color: var(--red);
-  font-size: 8px;
+  font-size: 14px;
   line-height: 1.7;
   letter-spacing: -0.1px;
   margin-top: 5px;
 }
 .eyebrow {
   font-family: "Courier New", monospace;
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: 0.08em;
   line-height: 1.5;
 }
@@ -189,7 +189,7 @@ em {
   display: flex;
   align-items: center;
   gap: 28px;
-  font-size: 11px;
+  font-size: 14px;
 }
 .site-header nav > a {
   padding: 7px 0;
@@ -209,7 +209,7 @@ em {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 10px;
+  font-size: 14px;
 }
 .motion-control > span:first-child {
   font-size: 15px;
@@ -259,8 +259,10 @@ em {
 }
 .hero-title-top {
   display: flex;
+  align-items: flex-end;
+  gap: 16px;
   justify-content: space-between;
-  font-size: 10px;
+  font-size: 14px;
   font-family: "Courier New", monospace;
   margin-bottom: 7px;
 }
@@ -286,12 +288,13 @@ em {
 }
 .hero-name {
   margin-top: 13px;
-  font-size: 18px;
+  font-size: 24px;
   transform: rotate(-4deg);
 }
 .hero-title > p {
+  line-height: 1.5;
   margin-top: 19px;
-  font-size: 10px;
+  font-size: 16px;
   letter-spacing: 0.04em;
 }
 .hero-float {
@@ -347,7 +350,7 @@ em {
   align-items: center;
   z-index: 6;
   font-family: "Courier New", monospace;
-  font-size: 9px;
+  font-size: 14px;
   letter-spacing: 0.05em;
 }
 .hero-bottom a {
@@ -355,7 +358,7 @@ em {
   gap: 18px;
   align-items: center;
   font-family: var(--font-sans), sans-serif;
-  font-size: 11px;
+  font-size: 14px;
 }
 .hero-bottom a span {
   color: var(--red);
@@ -422,7 +425,7 @@ em {
   gap: 35px;
 }
 .bio p {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.7;
   margin-bottom: 17px;
 }
@@ -436,7 +439,7 @@ em {
   margin: 0 0 25px;
   padding: 0;
   list-style: none;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.9;
 }
 .focus li::before {
@@ -534,8 +537,8 @@ em {
 }
 .chapter-copy > .eyebrow {
   margin-bottom: 20px;
-  opacity: 0.6;
-  font-size: 9px;
+  opacity: 0.85;
+  font-size: 14px;
 }
 .chapter h2 {
   color: var(--red);
@@ -552,7 +555,7 @@ em {
 .chapter .paper-label {
   margin-top: 15px;
   margin-left: 15%;
-  font-size: 19px;
+  font-size: 26px;
   transform: rotate(2deg);
 }
 .chapter-art {
@@ -624,7 +627,7 @@ em {
   background-color: #e9dfff;
 }
 .category-pill {
-  font-size: 11px;
+  font-size: 14px;
   border: 1px solid currentColor;
   opacity: 0.7;
   border-radius: 20px;
@@ -639,7 +642,7 @@ em {
 }
 .identity-copy > .eyebrow {
   margin-bottom: 27px;
-  font-size: 9px;
+  font-size: 14px;
 }
 .identity-copy h2 {
   font-size: clamp(36px, 4.8vw, 68px);
@@ -674,7 +677,7 @@ em {
   margin-bottom: 9px;
 }
 .project-description {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.7;
   max-width: 320px;
 }
@@ -684,7 +687,7 @@ em {
   border: 1px solid #75776b80;
   padding: 13px 23px;
   border-radius: 6px;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.4;
 }
 .design-note em {
@@ -773,7 +776,7 @@ em {
   position: absolute;
   left: 7%;
   bottom: 4%;
-  font-size: 10px;
+  font-size: 14px;
   text-decoration: underline;
   text-underline-offset: 5px;
   z-index: 6;
@@ -879,7 +882,7 @@ em {
   letter-spacing: -0.02em;
 }
 .campaign-heading > p {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.6;
 }
 .seven-up {
@@ -918,7 +921,7 @@ em {
   padding-top: 23px;
   border-top: 1px solid #f7f0d84d;
   font-family: "Courier New", monospace;
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: 0.04em;
 }
 .lunara {
@@ -963,7 +966,7 @@ em {
   color: var(--red);
 }
 .social-heading p {
-  font-size: 11px;
+  font-size: 14px;
 }
 .social-mosaic {
   display: grid;
@@ -1001,13 +1004,13 @@ em {
   color: #476148;
 }
 .print-copy p {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.7;
   max-width: 300px;
   margin-bottom: 30px;
 }
 .text-link {
-  font-size: 11px;
+  font-size: 14px;
   border-bottom: 1px solid;
   padding-bottom: 5px;
 }
@@ -1126,7 +1129,7 @@ em {
   font-weight: 300;
 }
 .motion-heading > p {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.7;
 }
 .video-grid {
@@ -1152,7 +1155,7 @@ em {
   gap: 12px;
   padding-top: 12px;
   font-family: "Courier New", monospace;
-  font-size: 10px;
+  font-size: 14px;
   line-height: 1.6;
 }
 .video-grid figcaption > span:last-child {
@@ -1185,7 +1188,7 @@ em {
   color: #476148;
 }
 .archive-heading > p {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.7;
 }
 .category-filters {
@@ -1197,7 +1200,7 @@ em {
   border: 1px solid #18191840;
   border-radius: 20px;
   padding: 9px 13px;
-  font-size: 11px;
+  font-size: 14px;
   background: #e6e1d570;
   display: flex;
   gap: 9px;
@@ -1205,7 +1208,7 @@ em {
 }
 .category-filters button span {
   font-family: "Courier New", monospace;
-  font-size: 9px;
+  font-size: 14px;
   opacity: 0.65;
 }
 .category-filters button[aria-pressed="true"] {
@@ -1225,7 +1228,7 @@ em {
 .subcategory-filters button {
   background: transparent;
   padding: 5px 0;
-  font-size: 11px;
+  font-size: 14px;
   border-bottom: 1px solid transparent;
 }
 .subcategory-filters button[aria-pressed="true"] {
@@ -1234,7 +1237,7 @@ em {
 }
 .archive-count {
   font-family: "Courier New", monospace;
-  font-size: 10px;
+  font-size: 14px;
   padding: 25px 0 15px;
 }
 .work-grid {
@@ -1285,14 +1288,14 @@ em {
 }
 .work-caption > span:first-child {
   display: block;
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.5;
   overflow-wrap: anywhere;
 }
 .work-caption > span:last-child {
   display: block;
   font-family: "Courier New", monospace;
-  font-size: 9px;
+  font-size: 14px;
   color: #51554b;
   margin-top: 4px;
 }
@@ -1303,7 +1306,7 @@ em {
   border: 1px solid #18191880;
   border-radius: 40px;
   padding: 13px 28px;
-  font-size: 12px;
+  font-size: 14px;
 }
 .archive-expand:hover {
   background: var(--ink);
@@ -1335,7 +1338,7 @@ em {
   flex: 0 0 auto;
   gap: 15px;
   padding: 16px 20px;
-  font-size: 11px;
+  font-size: 14px;
   border-bottom: 1px solid #e6e1d51a;
 }
 .viewer-bar > span {
@@ -1372,14 +1375,14 @@ em {
 }
 .viewer-bottom > p {
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
   overflow-wrap: anywhere;
 }
 .viewer-bottom > p > span {
   display: block;
   margin-top: 5px;
-  font-size: 10px;
-  opacity: 0.6;
+  font-size: 14px;
+  opacity: 0.85;
 }
 .viewer-bottom button {
   font-size: 25px;
@@ -1448,7 +1451,7 @@ em {
 .contact-bottom > span,
 .contact-bottom > a {
   font-family: "Courier New", monospace;
-  font-size: 9px;
+  font-size: 14px;
 }
 #portfolio[data-motion="paused"] .marquee-track {
   animation-play-state: paused;
@@ -1519,7 +1522,7 @@ em {
     gap: 10px;
   }
   .bio p {
-    font-size: 12px;
+    font-size: 14px;
   }
   .focus h3 {
     font-size: 15px;
@@ -1594,7 +1597,7 @@ em {
     font-size: 14px;
   }
   .project-description {
-    font-size: 11px;
+    font-size: 14px;
   }
   .identity-art-1 {
     top: 18%;
@@ -1655,7 +1658,7 @@ em {
   }
   .site-header nav {
     gap: 15px;
-    font-size: 10px;
+    font-size: 14px;
   }
   .site-header nav > a:nth-child(2) {
     display: none;
@@ -1683,7 +1686,7 @@ em {
     letter-spacing: -0.085em;
   }
   .hero-title-top {
-    font-size: 7px;
+    font-size: 14px;
   }
   .hero-title-top span:first-child {
     font-size: 15px;
@@ -1696,11 +1699,11 @@ em {
     inset: 4px -8px 58px;
   }
   .hero-name {
-    font-size: 15px;
+    font-size: 24px;
     padding: 6px 10px;
   }
   .hero-title > p {
-    font-size: 8px;
+    font-size: 16px;
     margin-top: 14px;
   }
   .hero-float .art {
@@ -1743,7 +1746,7 @@ em {
     display: none;
   }
   .hero-bottom a {
-    font-size: 10px;
+    font-size: 14px;
   }
   .spread-top {
     top: 23px;
@@ -1751,7 +1754,7 @@ em {
     right: 20px;
   }
   .spread-top .eyebrow {
-    font-size: 9px;
+    font-size: 14px;
   }
   .about {
     min-height: 0;
@@ -1773,14 +1776,14 @@ em {
     gap: 5px;
   }
   .bio p {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.7;
   }
   .focus {
     margin-top: 5px;
   }
   .focus ul {
-    font-size: 11px;
+    font-size: 14px;
   }
   .about-polaroids {
     width: 100%;
@@ -1788,7 +1791,7 @@ em {
     padding: 35px 0 20px;
   }
   .polaroid figcaption {
-    font-size: 13px;
+    font-size: 14px;
   }
   .portrait-wrap {
     position: relative;
@@ -1833,14 +1836,14 @@ em {
     width: 88%;
   }
   .chapter-copy > .eyebrow {
-    font-size: 8px;
+    font-size: 14px;
     margin-bottom: 18px;
   }
   .chapter h2 {
     font-size: clamp(51px, 12vw, 75px);
   }
   .chapter .paper-label {
-    font-size: 17px;
+    font-size: 26px;
     margin-left: 10%;
   }
   .chapter-art {
@@ -1871,7 +1874,7 @@ em {
     min-height: 60px;
   }
   .project-tabs a {
-    font-size: 11px;
+    font-size: 14px;
     padding: 15px 10px;
     gap: 5px;
   }
@@ -1909,7 +1912,7 @@ em {
     font-size: 16px;
   }
   .project-description {
-    font-size: 13px;
+    font-size: 14px;
     max-width: 100%;
   }
   .design-note {
@@ -2019,7 +2022,7 @@ em {
     font-size: 43px;
   }
   .campaign-heading > p {
-    font-size: 12px;
+    font-size: 14px;
   }
   .poster-line {
     display: grid;
@@ -2036,7 +2039,7 @@ em {
     justify-self: center;
   }
   .campaign-caption {
-    font-size: 8px;
+    font-size: 14px;
     gap: 20px;
     line-height: 1.5;
   }
@@ -2059,7 +2062,7 @@ em {
   }
   .social-heading p {
     margin-top: 18px;
-    font-size: 11px;
+    font-size: 14px;
   }
   .social-mosaic {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2084,7 +2087,7 @@ em {
     font-size: 48px;
   }
   .print-copy p {
-    font-size: 13px;
+    font-size: 14px;
   }
   .print-collage {
     left: 0;
@@ -2192,7 +2195,7 @@ em {
     gap: 6px;
   }
   .category-filters button {
-    font-size: 10px;
+    font-size: 14px;
     padding: 9px 10px;
     gap: 6px;
   }
@@ -2201,13 +2204,13 @@ em {
     gap: 24px 12px;
   }
   .work-caption > span:first-child {
-    font-size: 10px;
+    font-size: 14px;
   }
   .work-caption > span:last-child {
-    font-size: 8px;
+    font-size: 14px;
   }
   .archive-expand {
-    font-size: 11px;
+    font-size: 14px;
     padding: 12px 22px;
   }
   .image-dialog {
@@ -2217,13 +2220,13 @@ em {
   }
   .viewer-bar {
     padding: 10px;
-    font-size: 10px;
+    font-size: 14px;
   }
   .viewer-bottom {
     padding: 8px 10px 12px;
   }
   .viewer-bottom > p {
-    font-size: 10px;
+    font-size: 14px;
   }
   .contact {
     min-height: 620px;
@@ -2245,7 +2248,7 @@ em {
     display: none;
   }
   .contact-bottom > a {
-    font-size: 9px;
+    font-size: 14px;
   }
   .footer-identity .signature {
     width: 35px;
